@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBot", "TelegramBot\TelegramBot.csproj", "{912C95E6-3BF2-4703-9851-6C7C6B0D42AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{023FD791-4C58-4298-8356-D89AC811DF78}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{912C95E6-3BF2-4703-9851-6C7C6B0D42AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912C95E6-3BF2-4703-9851-6C7C6B0D42AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912C95E6-3BF2-4703-9851-6C7C6B0D42AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912C95E6-3BF2-4703-9851-6C7C6B0D42AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿services:
+  telegrambot:
+    image: telegrambot
+    build:
+      context: .
+      dockerfile: TelegramBot/Dockerfile
+  
+  database:
+    image: postgres@latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password1
+      POSTGRES_DB: telegramdb
+    volumes:
+        - type: tmpfs
+          target: /home/telegrambot
+  
