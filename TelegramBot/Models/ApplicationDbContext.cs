@@ -9,7 +9,6 @@ public class ApplicationDbContext:DbContext
         
     }
     public DbSet<Service> Services { get; set; }
-    public DbSet<SubscriptionStatus> SubscriptionStatus { get; set; }
     public DbSet<Subscription> Subscriptions { get; set; }
     public DbSet<SubscriptionPeriod> SubscriptionPeriods { get; set; }
 }
