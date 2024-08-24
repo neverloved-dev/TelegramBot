@@ -34,7 +34,7 @@ public class SubscriptionService : ISubscriptionService
             UserId = userId,
             Period = period,
             StartDate = DateTime.UtcNow,
-            EndDate = DateTime.UtcNow.AddDays(period.period),
+            EndDate = DateTime.UtcNow.AddDays(period.Period),
             Status = SubscriptionStatus.Active
         };
 
@@ -45,19 +45,37 @@ public class SubscriptionService : ISubscriptionService
     public async Task<Subscription> ChangeSubscriptionAsync(int subscriptionId, SubscriptionPeriod newPeriod)
     {
         var subscription = await _subscriptionRepository.GetSubscriptionByIdAsync(subscriptionId);
-        if (subscription == null) throw new ArgumentException("Invalid subscription ID.");
+        if (subscription == null)
+        {
+            throw new KeyNotFoundException($"Subscription with ID {subscriptionId} not found.");
+        }
 
         var service = await _serviceRepository.GetServiceByIdAsync(subscription.ServiceId);
-        var price = service.Pricing[newPeriod];
-        var paymentResult = await _paymentService.ProcessPaymentAsync(subscription.UserId, price);
-        if (!paymentResult) throw new InvalidOperationException("Payment failed.");
+        if (service == null)
+        {
+            throw new KeyNotFoundException($"Service with ID {subscription.ServiceId} not found.");
+        }
 
+        if (!service.Pricing.TryGetValue(newPeriod, out var newPrice))
+        {
+            throw new KeyNotFoundException($"Pricing for the period '{newPeriod.Period}' not found in service '{service.Name}'.");
+        }
+
+        // Process payment and other business logic
+        bool paymentSucceeded = await _paymentService.ProcessPaymentAsync(subscription.UserId, newPrice);
+        if (!paymentSucceeded)
+        {
+            throw new InvalidOperationException("Payment processing failed.");
+        }
+
+        // Update subscription details...
         subscription.Period = newPeriod;
-        subscription.EndDate = DateTime.UtcNow.AddDays(newPeriod.period);
-
+        subscription.EndDate = DateTime.UtcNow.AddDays(newPeriod.Period);
         await _subscriptionRepository.UpdateSubscriptionAsync(subscription);
+
         return subscription;
     }
+
 
     public async Task CancelSubscriptionAsync(int subscriptionId)
     {
