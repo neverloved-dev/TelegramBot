@@ -2,5 +2,5 @@
 
 public class SubscriptionPeriod
 {
-    
+    public int period { get; set; }
 }

@@ -1,6 +1,7 @@
 ﻿namespace TelegramBot.Models;
 
-public class SubscriptionStatus
+public enum SubscriptionStatus
 {
-    public bool Subscribed { get; set; }
+   Active,
+   Canceled
 }
