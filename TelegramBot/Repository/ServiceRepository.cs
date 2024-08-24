@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TelegramBot.Interfaces;
 using TelegramBot.Models;
 
 namespace TelegramBot.Repository;
 
-public class ServiceRepository
+public class ServiceRepository:IServiceRepository
 {
     private readonly ApplicationDbContext _context;
 
