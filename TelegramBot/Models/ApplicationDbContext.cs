@@ -16,6 +16,16 @@ public class ApplicationDbContext:DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Subscription>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+        });
+
+        modelBuilder.Entity<Service>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+        });
+        
         // Define the converter to serialize/deserialize the dictionary
         var dictionaryToJsonConverter = new ValueConverter<Dictionary<SubscriptionPeriod, decimal>, string>(
             v => JsonConvert.SerializeObject(v), // Convert dictionary to JSON string
