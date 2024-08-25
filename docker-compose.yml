@@ -6,12 +6,13 @@
       dockerfile: TelegramBot/Dockerfile
   
   database:
-    image: postgres@latest
+    image: postgres
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password1
       POSTGRES_DB: telegramdb
+    ports:
+      - 5432:5432
     volumes:
-        - type: tmpfs
-          target: /home/telegrambot
+      - ./data:/var/lib/postgresql/data
   
