@@ -2,6 +2,7 @@
 
 public class SubscriptionPeriod
 {
+    public int Id { get; set; }
     public int Period { get; set; }
     
     public override bool Equals(object obj)
