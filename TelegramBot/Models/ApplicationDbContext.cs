@@ -35,31 +35,6 @@ public class ApplicationDbContext:DbContext
         modelBuilder.Entity<Service>()
             .Property(e => e.Pricing)
             .HasConversion(dictionaryToJsonConverter);
-
-        modelBuilder.Entity<Service>().HasData(
-            new Service
-            {
-                Id = 1,
-                Name = "Basic Service",
-                Pricing = new Dictionary<SubscriptionPeriod, decimal>
-                {
-                    { new SubscriptionPeriod{Period = 30}, 9.99m }
-                }
-            },
-            new Service
-            {
-                Id = 2,
-                Name = "Premium Service",
-                Pricing = new Dictionary<SubscriptionPeriod, decimal>
-                {
-                    {  new SubscriptionPeriod{Period = 30}, 19.99m },
-                    { new SubscriptionPeriod{Period = 30}, 54.99m },
-                    {  new SubscriptionPeriod{Period = 30}, 199.99m }
-                }
-            }
-            
-        );
-
         base.OnModelCreating(modelBuilder);
     }
     
