@@ -1,26 +1,41 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER $APP_UID
-WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+﻿# Use the official .NET SDK image for the build environment
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-COPY ["TelegramBot/TelegramBot.csproj", "TelegramBot/"]
-RUN dotnet restore "TelegramBot/TelegramBot.csproj"
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy everything from the current directory to the working directory inside the container
 COPY . .
-WORKDIR "/src/TelegramBot"
-RUN dotnet build "TelegramBot.csproj" -c $BUILD_CONFIGURATION -o /app/build
-# Install EF Core CLI tool
-RUN dotnet tool install --global dotnet-ef
-CMD ["sh","c","dotnet ef database update"]
 
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "TelegramBot.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+# Restore NuGet packages
+RUN dotnet restore
 
-FROM base AS final
+# Build the application in Release mode
+RUN dotnet build -c Release --no-restore
+
+# Publish the application to the out directory in Release mode
+RUN dotnet publish -c Release -o out --no-build
+
+# Use the official .NET runtime image for the runtime environment
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
+
+# Set the working directory for the runtime environment
 WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "TelegramBot.dll"]
+
+# Copy the published output from the build environment
+COPY --from=build-env /app/out .
+
+# Install a specific version of EF Core CLI tools globally
+RUN dotnet tool install --global dotnet-ef --version 7.0.0
+
+# Ensure the global tools are in the PATH
+ENV PATH="$PATH:/root/.dotnet/tools"
+
+# Update the database using EF Core CLI tools
+RUN dotnet ef database update
+
+# Expose port 80 for the Web API
+EXPOSE 80
+
+# Set the entry point to run the Web API
+ENTRYPOINT ["dotnet", "YourProjectName.dll"]

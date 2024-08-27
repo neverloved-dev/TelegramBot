@@ -1,9 +1,15 @@
 ﻿services:
-  telegrambot:
-    image: telegrambot
+  telegrambotapi:
+    image: telegrambotapi
     build:
       context: .
       dockerfile: TelegramBot/Dockerfile
+
+  telegrambotapp:
+    image: telegrambotapp
+    build:
+      context: .
+      dockerfile: TelegramBotApplication/Dockerfile
   
   database:
     image: postgres

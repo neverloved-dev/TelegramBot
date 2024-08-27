@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBot", "TelegramBot\TelegramBot.csproj", "{912C95E6-3BF2-4703-9851-6C7C6B0D42AC}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBot", "TelegramBot\TelegramBot.csproj", "{912C95E6-3BF2-4703-9851-6C7C6B0D42AC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{023FD791-4C58-4298-8356-D89AC811DF78}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBotUnitTests", "TelegramBotUnitTests\TelegramBotUnitTests.csproj", "{CEBCEF57-1053-4869-9D3A-C2A8EA2A0725}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBotUnitTests", "TelegramBotUnitTests\TelegramBotUnitTests.csproj", "{CEBCEF57-1053-4869-9D3A-C2A8EA2A0725}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBotApplication", "TelegramBotApplication\TelegramBotApplication.csproj", "{3783ABE5-A255-4C48-95A8-F4C750C2A277}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,5 +28,12 @@ Global
 		{CEBCEF57-1053-4869-9D3A-C2A8EA2A0725}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEBCEF57-1053-4869-9D3A-C2A8EA2A0725}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEBCEF57-1053-4869-9D3A-C2A8EA2A0725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3783ABE5-A255-4C48-95A8-F4C750C2A277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3783ABE5-A255-4C48-95A8-F4C750C2A277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3783ABE5-A255-4C48-95A8-F4C750C2A277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3783ABE5-A255-4C48-95A8-F4C750C2A277}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
