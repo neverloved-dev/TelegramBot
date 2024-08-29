@@ -1,28 +1,36 @@
-# See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
+# Use the official .NET SDK image for .NET 8.0 as the build environment
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 
-# This stage is used when running from VS in fast mode (Default for Debug configuration)
-FROM mcr.microsoft.com/dotnet/runtime:8.0 AS base
-USER app
+# Set the working directory inside the container
 WORKDIR /app
 
-
-# This stage is used to build the service project
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-COPY ["TelegramBotApplication/TelegramBotApplication.csproj", "TelegramBotApplication/"]
-RUN dotnet restore "./TelegramBotApplication/TelegramBotApplication.csproj"
+# Copy everything from the current directory to the working directory inside the container
 COPY . .
-WORKDIR "/src/TelegramBotApplication"
-RUN dotnet build "./TelegramBotApplication.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-# This stage is used to publish the service project to be copied to the final stage
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./TelegramBotApplication.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+# Restore NuGet packages
+RUN dotnet restore
 
-# This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
-FROM base AS final
+# Build the application in Release mode
+RUN dotnet build -c Release --no-restore
+
+# Publish the application to the out directory in Release mode
+RUN dotnet publish -c Release -o out --no-build
+
+# Install a specific version of EF Core CLI tools globally
+RUN dotnet tool install --global dotnet-ef --version 8.0.8
+
+# Ensure the global tools are in the PATH
+ENV PATH="$PATH:/root/.dotnet/tools"
+
+# Use the official .NET runtime image for .NET 8.0 as the runtime environment
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+
+# Set the working directory for the runtime environment
 WORKDIR /app
-COPY --from=publish /app/publish .
+
+# Copy the published output from the build environment
+COPY --from=build-env /app/out .
+
+
+# Set the entry point to run the Web API
 ENTRYPOINT ["dotnet", "TelegramBotApplication.dll"]

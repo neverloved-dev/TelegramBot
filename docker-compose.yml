@@ -4,7 +4,14 @@
     build:
       context: .
       dockerfile: TelegramBot/Dockerfile
-
+    depends_on: [database]
+    ports:
+     - 5019:5019
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=database;Port=5432;Database=telegramdb;Username=user;Password=password1
+    command: >
+      sh -c "dotnet ef database update --project /app/TelegramBot/TelegramBot.csproj --startup-project /app/TelegramBot/TelegramBot.csproj &&
+             dotnet TelegramBot.dll"
   telegrambotapp:
     image: telegrambotapp
     build:
