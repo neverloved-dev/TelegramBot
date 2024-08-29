@@ -22,9 +22,6 @@ RUN dotnet tool install --global dotnet-ef --version 8.0.8
 # Ensure the global tools are in the PATH
 ENV PATH="$PATH:/root/.dotnet/tools"
 
-# Run EF Core migrations (specify the path to the project that contains EF Core context)
-RUN dotnet ef database update --project /app/TelegramBot/TelegramBot.csproj --startup-project /app/TelegramBot/TelegramBot.csproj
-
 # Use the official .NET runtime image for .NET 8.0 as the runtime environment
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 

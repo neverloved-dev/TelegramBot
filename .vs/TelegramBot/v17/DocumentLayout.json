@@ -1,0 +1,153 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{912C95E6-3BF2-4703-9851-6C7C6B0D42AC}|TelegramBot\\TelegramBot.csproj|c:\\users\\andjic djordje\\riderprojects\\telegrambot\\telegrambot\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{912C95E6-3BF2-4703-9851-6C7C6B0D42AC}|TelegramBot\\TelegramBot.csproj|solutionrelative:telegrambot\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3783ABE5-A255-4C48-95A8-F4C750C2A277}|TelegramBotApplication\\TelegramBotApplication.csproj|c:\\users\\andjic djordje\\riderprojects\\telegrambot\\telegrambotapplication\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3783ABE5-A255-4C48-95A8-F4C750C2A277}|TelegramBotApplication\\TelegramBotApplication.csproj|solutionrelative:telegrambotapplication\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{023FD791-4C58-4298-8356-D89AC811DF78}|Solution Items{023FD791-4C58-4298-8356-D89AC811DF78}|C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{023FD791-4C58-4298-8356-D89AC811DF78}|Solution Items{023FD791-4C58-4298-8356-D89AC811DF78}|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3783ABE5-A255-4C48-95A8-F4C750C2A277}|TelegramBotApplication\\TelegramBotApplication.csproj|c:\\users\\andjic djordje\\riderprojects\\telegrambot\\telegrambotapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3783ABE5-A255-4C48-95A8-F4C750C2A277}|TelegramBotApplication\\TelegramBotApplication.csproj|solutionrelative:telegrambotapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3783ABE5-A255-4C48-95A8-F4C750C2A277}|TelegramBotApplication\\TelegramBotApplication.csproj|c:\\users\\andjic djordje\\riderprojects\\telegrambot\\telegrambotapplication\\subscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3783ABE5-A255-4C48-95A8-F4C750C2A277}|TelegramBotApplication\\TelegramBotApplication.csproj|solutionrelative:telegrambotapplication\\subscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3783ABE5-A255-4C48-95A8-F4C750C2A277}|TelegramBotApplication\\TelegramBotApplication.csproj|c:\\users\\andjic djordje\\riderprojects\\telegrambot\\telegrambotapplication\\menuhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3783ABE5-A255-4C48-95A8-F4C750C2A277}|TelegramBotApplication\\TelegramBotApplication.csproj|solutionrelative:telegrambotapplication\\menuhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3783ABE5-A255-4C48-95A8-F4C750C2A277}|TelegramBotApplication\\TelegramBotApplication.csproj|c:\\users\\andjic djordje\\riderprojects\\telegrambot\\telegrambotapplication\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3783ABE5-A255-4C48-95A8-F4C750C2A277}|TelegramBotApplication\\TelegramBotApplication.csproj|solutionrelative:telegrambotapplication\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3783ABE5-A255-4C48-95A8-F4C750C2A277}|TelegramBotApplication\\TelegramBotApplication.csproj|c:\\users\\andjic djordje\\riderprojects\\telegrambot\\telegrambotapplication\\botservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3783ABE5-A255-4C48-95A8-F4C750C2A277}|TelegramBotApplication\\TelegramBotApplication.csproj|solutionrelative:telegrambotapplication\\botservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBot\\Dockerfile",
+              "RelativeDocumentMoniker": "TelegramBot\\Dockerfile",
+              "ToolTip": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBot\\Dockerfile",
+              "RelativeToolTip": "TelegramBot\\Dockerfile",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-27T17:18:46.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-08-27T17:10:25.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBotApplication\\Dockerfile",
+              "RelativeDocumentMoniker": "TelegramBotApplication\\Dockerfile",
+              "ToolTip": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBotApplication\\Dockerfile",
+              "RelativeToolTip": "TelegramBotApplication\\Dockerfile",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-27T16:31:58.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SubscriptionService.cs",
+              "DocumentMoniker": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBotApplication\\SubscriptionService.cs",
+              "RelativeDocumentMoniker": "TelegramBotApplication\\SubscriptionService.cs",
+              "ToolTip": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBotApplication\\SubscriptionService.cs",
+              "RelativeToolTip": "TelegramBotApplication\\SubscriptionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T16:31:28.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserData.cs",
+              "DocumentMoniker": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBotApplication\\UserData.cs",
+              "RelativeDocumentMoniker": "TelegramBotApplication\\UserData.cs",
+              "ToolTip": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBotApplication\\UserData.cs",
+              "RelativeToolTip": "TelegramBotApplication\\UserData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T16:29:10.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MenuHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBotApplication\\MenuHandler.cs",
+              "RelativeDocumentMoniker": "TelegramBotApplication\\MenuHandler.cs",
+              "ToolTip": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBotApplication\\MenuHandler.cs",
+              "RelativeToolTip": "TelegramBotApplication\\MenuHandler.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAAwIYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T16:28:40.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BotService.cs",
+              "DocumentMoniker": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBotApplication\\BotService.cs",
+              "RelativeDocumentMoniker": "TelegramBotApplication\\BotService.cs",
+              "ToolTip": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBotApplication\\BotService.cs",
+              "RelativeToolTip": "TelegramBotApplication\\BotService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwCQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T16:27:52.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBotApplication\\Program.cs",
+              "RelativeDocumentMoniker": "TelegramBotApplication\\Program.cs",
+              "ToolTip": "C:\\Users\\Andjic Djordje\\RiderProjects\\TelegramBot\\TelegramBotApplication\\Program.cs",
+              "RelativeToolTip": "TelegramBotApplication\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T16:26:16.081Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
